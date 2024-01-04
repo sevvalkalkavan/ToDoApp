@@ -28,7 +28,7 @@
                                 <rect key="frame" x="0.0" y="211" width="393" height="607"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="J2k-40-66G">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="taskCell" id="J2k-40-66G" customClass="TaskCell" customModule="ToDo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="393" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="J2k-40-66G" id="s2z-GF-ED5">
@@ -63,6 +63,10 @@
                                                 <constraint firstItem="LRI-JK-2Ri" firstAttribute="top" secondItem="s2z-GF-ED5" secondAttribute="top" constant="10" id="z4I-A0-qy9"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dueDateLabel" destination="QO7-H4-7vK" id="Evo-33-Lxm"/>
+                                            <outlet property="titleLabel" destination="q8x-eK-fvS" id="bzs-1i-9yA"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -89,6 +93,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="searchBar" destination="Svz-Td-Q9d" id="qa5-fI-szZ"/>
+                        <outlet property="taskTableView" destination="AGx-aJ-szQ" id="asc-rS-Klm"/>
                         <segue destination="1JM-La-lII" kind="show" id="eA9-dJ-17g"/>
                     </connections>
                 </viewController>
@@ -99,7 +105,7 @@
         <!--Add New Note-->
         <scene sceneID="RV0-ie-ybJ">
             <objects>
-                <viewController id="umT-yh-9ew" sceneMemberID="viewController">
+                <viewController id="umT-yh-9ew" customClass="AddViewController" customModule="ToDo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9Ha-hA-Q08">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -158,6 +164,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add New Note" id="ljI-Rk-2kv"/>
+                    <connections>
+                        <outlet property="dueDateTF" destination="ARz-ca-dt5" id="4Fc-vw-jXK"/>
+                        <outlet property="subtitleTF" destination="8KY-l6-B8d" id="Cmu-wq-DI5"/>
+                        <outlet property="titleTF" destination="H19-UB-fMn" id="PAx-ZP-5oD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rue-Ye-Los" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -166,7 +177,7 @@
         <!--My Notes-->
         <scene sceneID="PBN-lv-3ea">
             <objects>
-                <viewController id="1JM-La-lII" sceneMemberID="viewController">
+                <viewController id="1JM-La-lII" customClass="DetailViewController" customModule="ToDo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jP6-i1-Si4">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -226,6 +237,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="My Notes" id="QNx-wi-MWP"/>
+                    <connections>
+                        <outlet property="dueDateTF" destination="tso-zW-vse" id="cFt-uZ-SjS"/>
+                        <outlet property="subtitleTF" destination="iUv-ZD-qdD" id="Lge-QE-ok0"/>
+                        <outlet property="titleTF" destination="Ige-y3-jKT" id="7Bv-VM-lks"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UN7-0g-eJj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
