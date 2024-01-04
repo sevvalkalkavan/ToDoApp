@@ -31,6 +31,7 @@
 		02BFBFEC2B47353B009E5E5B /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 02BFBFE62B47353B009E5E5B /* FMDatabase.m */; };
 		02BFBFED2B47353B009E5E5B /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 02BFBFE72B47353B009E5E5B /* FMDatabaseAdditions.m */; };
 		02BFBFEE2B47353B009E5E5B /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 02BFBFE92B47353B009E5E5B /* FMResultSet.m */; };
+		02BFBFF22B47367E009E5E5B /* task.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 02BFBFF12B47367E009E5E5B /* task.sqlite */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,8 @@
 		02BFBFE72B47353B009E5E5B /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
 		02BFBFE82B47353B009E5E5B /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
 		02BFBFE92B47353B009E5E5B /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		02BFBFF02B473664009E5E5B /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		02BFBFF12B47367E009E5E5B /* task.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = task.sqlite; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,7 @@
 			children = (
 				02BFBFA02B471C22009E5E5B /* ToDo */,
 				02BFBF9F2B471C22009E5E5B /* Products */,
+				02BFBFEF2B473664009E5E5B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,6 +114,7 @@
 				02BFBFAA2B471C23009E5E5B /* Assets.xcassets */,
 				02BFBFAC2B471C23009E5E5B /* LaunchScreen.storyboard */,
 				02BFBFAF2B471C23009E5E5B /* Info.plist */,
+				02BFBFF12B47367E009E5E5B /* task.sqlite */,
 				02BFBFE52B47353B009E5E5B /* FMDatabase.h */,
 				02BFBFE62B47353B009E5E5B /* FMDatabase.m */,
 				02BFBFE32B47353B009E5E5B /* FMDatabaseAdditions.h */,
@@ -176,6 +181,14 @@
 				02BFBFC92B472FC1009E5E5B /* TaskDaoRepository.swift */,
 			);
 			path = Repo;
+			sourceTree = "<group>";
+		};
+		02BFBFEF2B473664009E5E5B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				02BFBFF02B473664009E5E5B /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,6 +262,7 @@
 			files = (
 				02BFBFAE2B471C23009E5E5B /* LaunchScreen.storyboard in Resources */,
 				02BFBFAB2B471C23009E5E5B /* Assets.xcassets in Resources */,
+				02BFBFF22B47367E009E5E5B /* task.sqlite in Resources */,
 				02BFBFA92B471C22009E5E5B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,14 +9,25 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
-    @IBOutlet weak var titleTF: UITextField!
-    @IBOutlet weak var subtitleTF: UITextView!
-    @IBOutlet weak var dueDateTF: UITextField!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var subtitleLabel: UILabel!
+    @IBOutlet weak var duedateLabel: UILabel!
+    
+   
+    var task: Task?
+    
+    var viewModal = DetailViewModal()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        if let t = task{
+            print("Task title: \(t.title ?? "nil"), subtitle: \(t.subtitle ?? "nil"), dueDate: \(t.dueDate ?? "nil")")
+
+            titleLabel.text = t.title
+            subtitleLabel.text = t.subtitle
+            duedateLabel.text = t.dueDate
+        }
     }
     
 

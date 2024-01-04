@@ -8,5 +8,5 @@
 import Foundation
 
 class DetailViewModal{
-    
+    var trepo = TaskDaoRepository()
 }
